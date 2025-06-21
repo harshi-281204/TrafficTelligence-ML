@@ -27,6 +27,10 @@ TrafficTelligence-ML/
 └── README.md # Project overview
 
 
+
+
+
+
 ---
 
 ## 📊 Features Used
@@ -40,34 +44,33 @@ TrafficTelligence-ML/
 
 ---
 
-## 🚀 How to Run
-
-### 1. Clone or Download the Repository
-```bash
-git clone https://github.com/yourusername/TrafficTelligence.git
+🧠 How to Run the Project
+📥 Clone the Repository
+git clone https://github.com/yourusername/TrafficTelligence-ML.git
 cd TrafficTelligence-ML
 
-2. Set Up Virtual Environment
-bash
-Copy
-Edit
+
+🛠️ Set Up Virtual Environment
 python -m venv venv
-venv\Scripts\activate    # On Windows
+venv\Scripts\activate   # On Windows
 pip install -r requirements.txt
-3. Run the Web App
-bash
-Copy
-Edit
+
+
+
+🚀 Run the Web App
+
 cd app
 python app.py
 Then open your browser at:
-http://127.0.0.1:5000
+👉 http://127.0.0.1:5000
 
-✅ Sample Prediction
+
+
+🔍 Sample Prediction
 Input Feature	Value
-Temperature	289.0
-Rain	0.0
-Snow	0.0
+Temperature	289.0 (K)
+Rain	0.0 (mm)
+Snow	0.0 (mm)
 Hour	8
 Day of Week	1 (Tuesday)
 Month	6 (June)
@@ -81,7 +84,7 @@ R² Score: 0.94
 
 RMSE: ~467
 
-🛠 Built With
+⚙️ Built With
 Python
 
 Scikit-learn
@@ -100,5 +103,3 @@ Internship: SmartInternz AI-ML Internship
 👨‍💻 Developed By
 Akash
 B.Tech CSE, JNTUACEP
-SmartInternz Machine Learning Internship (2025)
-
