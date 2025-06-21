@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Volume Predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            width: 100%;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e2f0d9;
+            border-left: 5px solid #28a745;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Traffic Volume Prediction</h2>
+        <form action="/predict" method="post">
+            <label for="temp">Temperature (in Kelvin):</label>
+            <input type="text" id="temp" name="temp" required>
+
+            <label for="rain">Rain (in mm):</label>
+            <input type="text" id="rain" name="rain" required>
+
+            <label for="snow">Snow (in mm):</label>
+            <input type="text" id="snow" name="snow" required>
+
+            <label for="hour">Hour (0–23):</label>
+            <input type="text" id="hour" name="hour" required>
+
+            <label for="dayofweek">Day of Week (0=Mon, 6=Sun):</label>
+            <input type="text" id="dayofweek" name="dayofweek" required>
+
+            <label for="month">Month (1–12):</label>
+            <input type="text" id="month" name="month" required>
+
+            <input type="submit" value="Predict">
+        </form>
+
+        {% if prediction %}
+        <div class="result">
+            <p><strong>Predicted Traffic Volume:</strong> {{ prediction }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+
+</html>
